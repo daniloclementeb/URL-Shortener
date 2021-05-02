@@ -47,7 +47,7 @@ class UrlServices {
 
 
     private fun validateURL(url: String): Boolean {
-        val regex = "\\b(http|https|ftp|file)?(://)?[-a-zA-Z0-9+&@#/%?=~_|!:,.;]*[-a-zA-Z0-9+&@#/%=~_|]\\.[-a-zA-Z0-9+&@#/%=~_|]*";
+        val regex = "\\b(http|https|ftp|file)(://)[-a-zA-Z0-9+&@#/%?=~_|!:,.;]*[-a-zA-Z0-9+&@#/%=~_|]\\.[-a-zA-Z0-9+&@#/%=~_|]*";
         val patt = Pattern.compile(regex);
         val matcher = patt.matcher(url);
         return matcher.matches();
